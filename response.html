@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!-- @aiman malik,Response Page,
+ Southern Illinois University
+Developed:9/6/24
+Tested: 9/7/24 -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Raawis Zabiha Halal Meat Shop</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script>
+        // Function to get query parameters from the URL and display them
+        function getQueryParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const firstName = urlParams.get('first-name');
+            const lastName = urlParams.get('last-name');
+            const email = urlParams.get('email');
+            const comments = urlParams.get('comments');
+
+            // Display the form data on the page
+            document.getElementById('first-name-display').textContent = firstName ? firstName : 'Not Provided';
+            document.getElementById('last-name-display').textContent = lastName ? lastName : 'Not Provided';
+            document.getElementById('email-display').textContent = email ? email : 'Not Provided';
+            document.getElementById('comments-display').textContent = comments ? comments : 'No Comments';
+        }
+
+        window.onload = getQueryParams;  // Run the function when the page loads
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Raawis Zabiha Halal Meat Shop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="special.html">Specials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Response Section -->
+    <section>
+        <h2>Thank You for Your Submission!</h2>
+        <p>Here is the information you provided:</p>
+        <ul>
+            <li><strong>First Name:</strong> <span id="first-name-display">Loading...</span></li>
+            <li><strong>Last Name:</strong> <span id="last-name-display">Loading...</span></li>
+            <li><strong>Email Address:</strong> <span id="email-display">Loading...</span></li>
+            <li><strong>Comments:</strong> <span id="comments-display">Loading...</span></li>
+        </ul>
+
+        <!-- Link back to Home page -->
+        <p><a href="index.html">Back to Home</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Raawis Zabiha Halal Meat Shop | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

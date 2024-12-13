@@ -1,0 +1,32 @@
+/* print.css */
+@media print {
+    body {
+        font-family: 'Arial', sans-serif;
+        color: #000;
+        background-color: #fff;
+    }
+
+    header, footer {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Adjust text size for printing */
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    /* Ensure images fit on paper */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
